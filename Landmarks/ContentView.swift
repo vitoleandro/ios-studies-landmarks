@@ -9,8 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            MapView()
+                .frame(height: 300)
+                .ignoresSafeArea(edges: .top)
+            
+            CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
+            ScrollView {
+                DetailView()
+                Divider()
+                DetailView()
+                Divider()
+                DetailView()
+                Divider()
+                DetailView()
+            }
+            
+            Spacer()
+        }
+
     }
 }
 
